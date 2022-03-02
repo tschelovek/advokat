@@ -1,0 +1,139 @@
+.hero
+  margin: -118px 0 0
+  padding: 200px 0 72px
+  background: url("../img/bg.jpg") center no-repeat
+  background-size: cover
+  display: flex
+  flex-flow: column
+  align-items: center
+  &__main
+    text-align: center
+    color: #ffffff
+    h1
+      color: $gold
+      font-family: 'Bodoni'
+      font-size: 100px
+      font-weight: 600
+    span
+      font-size: 36px
+  &__achievements
+    margin-top: 100px
+    &__list
+      display: flex
+      gap: 60px
+      color: #ffffff
+      font-size: 18px
+    li
+      display: flex
+      align-items: center
+      img
+        margin-right: 12px
+
+.principles
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 20px
+    counter-reset: section
+    margin-bottom: 80px
+    li
+      background: #ffffff
+      padding: 40px
+      position: relative
+      overflow: hidden
+      &::before
+        counter-increment: section
+        content: "0" counter(section)
+        position: absolute
+        top: 0
+        left: 0
+        font-size: 120px
+        font-family: Bodoni, sans-serif
+        font-weight: 900
+        color: $lightGrey
+        z-index: 5
+      span
+        position: relative
+        z-index: 15
+        font-family: Bodoni
+        font-size: 36px
+        font-weight: 600
+      p
+        position: relative
+        z-index: 15
+
+.services
+  padding: 80px 0
+  background-color: $darkGrey
+  color: #ffffff
+  font-size: 13px
+  &__list
+    margin: 80px 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    //grid-gap: 20px
+    row-gap: 90px
+    column-gap: 150px
+  h2
+    text-align: right
+
+.cases
+  background-color: $gold
+  &__item
+    display: block
+    max-width: 600px
+    span
+      display: block
+      color: $brown
+  .wrapper
+    background: url('../img/case.png') center left no-repeat
+
+.education
+  & .wrapper
+    display: flex
+    &_half.right
+      display: flex
+      flex-flow: column
+      align-items: flex-end
+  &__list
+    &__years
+      display: block
+      color: $gold
+      font-family: Bodoni
+      font-size: 46px
+      font-weight: 600
+      line-height: 1
+    &__title
+      display: block
+      margin-top: 18px
+      font-size: 22px
+      font-weight: 600
+    & > li
+      margin-top: 50px
+  &__card
+    padding: 20px 60px 60px
+    margin-left: auto
+    position: relative
+    max-width: 410px
+    border: 3px solid $lightGrey
+    background: url('../img/quots.png') bottom 60px right 60px no-repeat
+  &__achievements__list
+    padding: 0 0 45px
+    margin-bottom: 42px
+    border-bottom: 3px solid $lightGrey
+    li
+      margin-top: 40px
+      display: flex
+      align-items: center
+      color: $gold
+      font-weight: 800
+  &__img-container
+    max-width: 100px
+    width: 100%
+  h2
+    text-align: right
+  &__signature
+    margin-top: 12px
+    display: block
+    font-weight: 600
+
