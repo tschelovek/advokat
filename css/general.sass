@@ -1,15 +1,20 @@
+*, *::before, *::after
+  margin: 0
+  +box
+
+ul
+  list-style: none
+
 body
   max-width: 100%
   overflow-x: hidden
   display: flex
   flex-direction: column
-  @include font()
-  margin: 0
+  font-family: ProximaNova, sans-serif
 
   .wrapper
-    max-width: 1330px
+    max-width: 1300px
     padding: 0 15px
-    +box
     margin: 0 auto
 
     &_fullHD
@@ -20,12 +25,15 @@ body
 p
   margin: 0
 
+h2
+  font-family: Bodoni
+
 .innerTitle
-  @include font($textBlack, $regular, 400, 72px, 1)
+  //@include font($textBlack, $regular, 400, 72px, 1)
   margin: 0 0 70px
 
 .subtitle
-  @include font($textBlack, $regular, 400, 220px, 1)
+  //@include font($textBlack, $regular, 400, 220px, 1)
   position: absolute
   z-index: -1
   top: -15px
@@ -33,7 +41,7 @@ p
 .btn
   display: inline-flex
   padding: 0 55px
-  @include font($white, $regular, 400, 18px, 55px)
+  //@include font($white, $regular, 400, 18px, 55px)
   white-space: nowrap
   text-decoration: none
   +transition
@@ -42,6 +50,14 @@ p
 
   &:hover
     +transition
+
+  &_gold-transparent
+    padding: 12px 30px
+    color: $gold
+    border: 1px solid $gold
+    background-color: transparent
+    font-size: 12px
+    +border-radius(18px)
 
 .slick-slide
   &:focus
@@ -94,3 +110,11 @@ p
 
   &.slick-prev
     right: 90px
+
+.logo
+  &_footer, &_header
+    display: flex
+  &__text span
+    display: block
+
+
