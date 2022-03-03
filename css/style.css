@@ -239,6 +239,11 @@ header a {
   font-weight: 600;
 }
 
+#map {
+  width: 100px;
+  height: 520px;
+}
+
 .header {
   padding: 20px 0 30px;
 }
@@ -306,7 +311,7 @@ footer {
   font-weight: 900;
   src: url(../fonts/BodoniBlack.ttf) format("truetype");
 }
-.header__hamburger, .headerNav_adaptive {
+.headerNav_adaptive {
   display: none;
 }
 
@@ -332,7 +337,7 @@ footer {
 
 .menu-toggle-line {
   position: absolute;
-  background: #000000;
+  background: #cc9966;
   display: block;
   margin: auto;
   height: 4px;
@@ -616,6 +621,9 @@ footer {
   background: url("../img/case.png") center left no-repeat;
 }
 
+.education {
+  padding-bottom: 100px;
+}
 .education .wrapper {
   display: flex;
 }
@@ -672,6 +680,10 @@ footer {
   margin-top: 12px;
   display: block;
   font-weight: 600;
+}
+
+.contacts {
+  background: linear-gradient(to right, #ebebeb 40%, white 40%);
 }
 
 /* RESPONSIVE */
