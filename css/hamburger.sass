@@ -1,5 +1,5 @@
 @import "prefixes"
-@import "variables"
+//@import "variables"
 
 //.header__hamburger, .headerNav_adaptive
 //  display: none
@@ -96,46 +96,46 @@
   -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s
   -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s
 
-@media only screen and (max-width: 1200px)
-  .header__hamburger
-    display: block !important
-    position: absolute
-    right: 10px
-    top: 20px
+//@media only screen and (max-width: 1200px)
+  //.header__hamburger
+  //  display: block !important
+  //  position: absolute
+  //  right: 10px
+  //  top: 20px
 
-  .headerNav_adaptive
-    background: $textBlack
-    display: none
-    padding-top: 60px
-    position: absolute
-    left: -15px
-    right: -15px
-    top: 0
-    +transform(translateX(-100%))
-    z-index: 3
+.headerNav_adaptive
+  background: $textBlack
+  display: none
+  padding-top: 60px
+  position: absolute
+  left: 15px
+  right: 15px
+  top: 0
+  +transform(translateX(-100%))
+  z-index: 3
 
-    ul
-      list-style: none
-      margin: 0
-      padding: 0
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
 
-    .address p
-      @include font($textBlack)
-      background: $white
-      padding: 10px
-
-  .header_opened
-    display: block !important
-    +transform(translateX(0))
-
-  .headerNav_adaptive a
-    background: $white
-    border: $textBlack 1px solid
-    border-bottom: none
-    display: block
+  .address p
     @include font($textBlack)
+    background: $white
     padding: 10px
-    text-decoration: none
 
-  .headerNav_adaptive li:last-child a
-    border-bottom: $textBlack 1px solid
+.header_opened
+  display: block !important
+  +transform(translateX(0))
+
+.headerNav_adaptive a
+  background: $gold
+  border: $textBlack 1px solid
+  border-bottom: none
+  display: block
+  @include font($textBlack)
+  padding: 10px
+  text-decoration: none
+
+.headerNav_adaptive li:last-child a
+  border-bottom: $textBlack 1px solid
