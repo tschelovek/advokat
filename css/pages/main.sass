@@ -253,7 +253,7 @@
 
 
 .contacts
-  padding-top: 36px
+  //padding-top: 36px
   position: relative
   //background: linear-gradient(to right, $lightestGrey 40%, white 40%)
   background-color: $lightestGrey
@@ -267,6 +267,9 @@
     background-color: $textBlack
   .wrapper
     display: flex
+    .wrapper_half
+      z-index: 15
+      background-color: $lightestGrey
   &__list
     margin-top: 8px
     li
@@ -285,11 +288,14 @@
       color: $textBlack
       text-decoration: none
       &_gold
+        margin-bottom: 24px
         font-weight: 600
         color: $gold
+        display: inline-block
+        border-bottom: 2px solid $gold
 
   h2
-    margin-left: -20px
+    margin: 16px 0 0 -20px
     padding-left: 20px
     position: relative
     z-index: 10

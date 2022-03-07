@@ -2,6 +2,9 @@
   h2
     font-size: 80px
 
+  .principles .line-gold_right, .line-gold_left, .line-black_right, .line-black_left, .line-black_left
+    display: none
+
   .header
     &__link
       &_mail
@@ -18,10 +21,15 @@
 
   .hero
     &__achievements
+      margin-top: 40px
       &__list
         flex-flow: wrap
+        justify-content: space-around
+        gap: 0
         li
-          margin: 0 auto
+          margin: 24px auto 0
+          justify-content: center
+          width: 50%
     &__main h1
       font-size: 80px
 
@@ -60,6 +68,11 @@
       text-align: center
     h2
       text-align: center
+
+  #YMapsID
+    position: relative
+    left: unset
+    right: unset
 
   .footer
     &__list

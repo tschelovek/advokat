@@ -52,6 +52,16 @@ $(document).ready(() => {
         autoplay: false,
         nextArrow: '<button type="button" class="slick-next">слудующий<br>кейс</button>',
         prevArrow: '<button type="button" class="slick-prev">предыдущий<br>кейс</button>',
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                }
+            },
+        ]
+
     });
 
     /**
