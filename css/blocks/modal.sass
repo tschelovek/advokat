@@ -1,0 +1,91 @@
+.modal--callback
+  max-width: 500px
+  width: 100%
+  padding: 30px
+  text-align: center
+  +box
+
+.modal
+  display: none
+  background: #F5F5F5
+  width: 450px
+
+  .form-input
+    height: 45px
+    padding: 0 20px
+    line-height: 28px
+
+  .form-input, .form-textarea
+    width: 100%
+    background: #fff
+    border: 1px solid $gold
+    -webkit-border-radius: 24px
+    -moz-border-radius: 24px
+    -ms-border-radius: 24px
+    -o-border-radius: 24px
+    border-radius: 24px
+    color: #000
+    font-size: 14px
+    font-weight: 300
+    -webkit-transition: all 0.4s ease 0s
+    -o-transition: all 0.4s ease 0s
+    transition: all 0.4s ease 0s
+
+  &__title
+    //@include font($textBlack, $bold, 700, 25px)
+    margin-bottom: 20px
+
+  &__btns
+    display: flex
+    flex-direction: column
+
+    a
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  p
+    margin-bottom: 40px
+
+  &__order
+    margin-bottom: 30px
+    text-align: left
+
+    &__item
+      display: flex
+      background: $white
+      padding: 15px
+
+      img
+        width: 100px
+        height: 100px
+        +cover
+        flex-shrink: 0
+        margin-right: 10px
+
+      &_top
+        //@include font($textBlack, $regular, 14px)
+        margin-bottom: 10px
+
+      &__name
+        //@include font($textBlack, $regular, 400, 16px)
+        margin-bottom: 10px
+
+      &__price
+        //@include font($textBlack, $regular, 400, 15px)
+        margin-bottom: 10px
+
+.form-input
+  width: 100%
+  //@include font($textBlack, $regular, 400, 16px, 40px)
+  margin-bottom: 20px
+  padding: 0 10px
+  border: none
+
+  &:focus
+    outline: none
+
+.modal-form__row
+  label
+    //@include font($textBlack, $regular, 400, 16px, 1.3)
+    margin-bottom: 30px
+    display: block

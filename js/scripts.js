@@ -75,6 +75,18 @@ $(document).ready(() => {
 
     $('[class^="YMapsID"]').find('[class$="YMaps-layer-container"]').css('filter', 'grayscale(100%)');
 
+    /**
+     * FANCYBOX
+     */
+    $('[data-fancybox-modal]').fancybox({
+        trapFocus: true,
+        autoFocus: false,
+        touch: false,
+    });
+
+    /**
+     * YANDEX.MAPS API
+     */
     // Создает обработчик события window.onLoad
     YMaps.jQuery(function () {
         // Создает экземпляр карты и привязывает его к созданному контейнеру
