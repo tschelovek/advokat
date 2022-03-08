@@ -359,6 +359,7 @@ header a {
 
 .header {
   padding: 20px 0 30px;
+  position: relative;
 }
 .header__list {
   display: flex;
@@ -622,7 +623,7 @@ footer {
 }
 
 .headerNav_adaptive {
-  background: #000000;
+  background: #cc9966;
   display: none;
   padding-top: 60px;
   position: absolute;
