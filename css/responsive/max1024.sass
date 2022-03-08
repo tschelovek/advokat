@@ -1,0 +1,82 @@
+@media only screen and (max-width: 1024px)
+  h2
+    font-size: 80px
+
+  .principles .line-gold_right, .line-gold_left, .line-black_right, .line-black_left, .line-black_left
+    display: none
+
+  .header
+    &__link
+      &_mail
+        font-size: 0
+        &::before
+          content: '@'
+          font-size: 18px
+          font-weight: 600
+      &_phone
+        font-size: 14px
+    &__callback
+      padding: 12px 24px
+      font-size: 14px
+
+  .hero
+    &__achievements
+      margin-top: 40px
+      &__list
+        flex-flow: wrap
+        justify-content: space-around
+        gap: 0
+        li
+          margin: 24px auto 0
+          justify-content: center
+          width: 50%
+    &__main h1
+      font-size: 80px
+
+  .principles
+    .line-gold_right
+      top: 52px
+
+  .services
+    &__list
+      column-gap: 80px
+
+  .cases
+    .slick-list
+      margin: 0 280px
+    .slick-arrow
+      font-size: 20px
+
+  .education
+    .wrapper
+      flex-flow: column-reverse
+      &_half
+        width: unset
+    &__card
+      margin: 0 auto
+    &__list
+      text-align: center
+    h2
+      margin-bottom: 32px
+
+  .contacts
+    .wrapper
+      flex-flow: column
+      &_half
+        width: unset
+    &__list
+      text-align: center
+    h2
+      text-align: center
+
+  #YMapsID
+    position: relative
+    left: unset
+    right: unset
+
+  .footer
+    &__list
+      flex-flow: column
+      li
+        margin-bottom: 16px
+

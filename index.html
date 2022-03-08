@@ -1,84 +1,391 @@
 <!DOCTYPE HTML>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta content="" name="description"/>
-  <meta content="" name="keywords">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="telephone=no" name="format-detection">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="" name="description"/>
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
 
-  <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-  <link href="#" rel="shortcut icon">
-  <meta content="petersburg-studio.com" name="author">
-</head>
+    <link href="#" rel="shortcut icon">
+    <meta content="petersburg-studio.com" name="author">
+
+<!--    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4d8cd492b08eb44bfa0ef6a3650869a0af377b8d949e641affb806ea1b0e74f2&amp;width=1000&amp;height=572&amp;lang=ru_RU&amp;scroll=false"></script></head>-->
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
 <body>
 
 <header>
-  <div class="wrapper">
-    <div class="header">
-      <div class="logo">
-        <a href="#">
-        </a>
-      </div>
+    <div class="wrapper">
+        <div class="header">
 
-      <div class="header__hamburger">
-        <a class="adaptive-menu-toggle" href="#">
-          <span class="menu-toggle-inner">
-            <span class="menu-toggle-line menu-toggle-line--1"></span>
-            <span class="menu-toggle-line menu-toggle-line--2"></span>
-            <span class="menu-toggle-line menu-toggle-line--3"></span>
-            <span class="menu-toggle-line menu-toggle-line--4"></span>
-            <span class="menu-toggle-line menu-toggle-line--5"></span>
-          </span>
-        </a>
-      </div>
+            <ul class="header__list">
+                <li>
+                    <a href="#" class="logo_header">
+                        <img src="./img/icons/logo.png" alt="">
+                        <div class="logo__text">
+                            <span>Марина Эрзя</span>
+                            Бизнесс-адвокат
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#callback-modal" class="btn_gold-transparent header__callback" data-fancybox-modal>
+                        СВЯЗАТЬСЯ</a>
+                </li>
+                <li><a href="tel:+79310084338" class="header__link header__link_phone">+7 (931) 008-43-38</a></li>
+                <li><a href="mailto:info@erzya.pro" class="header__link header__link_mail">info@erzya.pro</a></li>
+                <li>
+                    <div class="language-selector">
+                        <a href="#" class="button_language-selector active">rus</a>
+                        <a href="#" class="button_language-selector">eng</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="header__hamburger">
+                        <a class="adaptive-menu-toggle" href="#">
+                            <span class="menu-toggle-inner">
+                                <span class="menu-toggle-line menu-toggle-line--1"></span>
+                                <span class="menu-toggle-line menu-toggle-line--2"></span>
+                                <span class="menu-toggle-line menu-toggle-line--3"></span>
+                                <span class="menu-toggle-line menu-toggle-line--4"></span>
+                                <span class="menu-toggle-line menu-toggle-line--5"></span>
+                              </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
 
-      <div class="headerNav_adaptive">
-        <ul class="nav">
-          <li>
-            <a href="#">Клиника</a>
-          </li>
-          <li>
-            <a href="#">Наши услуги</a>
-          </li>
-          <li>
-            <a href="#">Врачи</a>
-          </li>
-          <li>
-            <a href="#">Цены</a>
-          </li>
-          <li>
-            <a href="#">Акции</a>
-          </li>
-          <li>
-            <a href="#">Информация</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </div>
+            <nav class="headerNav_adaptive">
+                <ul class="nav">
+                    <li>
+                        <a href="#">Наши услуги</a>
+                    </li>
+                    <li>
+                        <a href="#">Цены</a>
+                    </li>
+                    <li>
+                        <a href="#">Информация</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </div>
 </header>
 
-<div class="s_hero">
-  <div class="wrapper_fullHD">
-    <div class="hero__slider">
+<section class="hero">
+    <div class="wrapper">
+        <div class="hero__main">
+            <h1>Марина Эрзя</h1>
+            <span>Бизнесс-адвокат</span>
+        </div>
+        <div class="hero__achievements">
+            <ul class="hero__achievements__list">
+                <li>
+                    <img src="./img/icons/28years.png" alt="">
+                    <p>Общий юридический стаж</p>
+                </li>
+                <li>
+                    <img src="./img/icons/scales.png" alt="">
+                    <p>Адвокатская палата Санкт-Петербурга</p>
+                </li>
+                <li>
+                    <img src="./img/icons/justige.png" alt="">
+                    <p>Подполковник юстиции</p>
+                </li>
+                <li>
+                    <img src="./img/icons/customs.png" alt="">
+                    <p>Подполковник таможенной службы</p>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-</div>
+</section>
+
+<section class="principles">
+    <div class="line-gold_right"></div>
+    <div class="wrapper">
+        <h2 class="gold">Принципы работы</h2>
+        <ul class="principles__list">
+            <li>
+                <span>Время важно и ценно</span>
+                <p>Важно ценить свое время и время своих клиентов, чтобы в максимально короткие сроки решать самые
+                    сложные задачи.</p>
+            </li>
+            <li>
+                <span>Нападение — лучшая защита</span>
+                <p>Эта фраза наиболее точно описывает принцип моей работы. Действие на опережение является максимально
+                    эффективной стратегией защиты.</p>
+            </li>
+            <li>
+                <span>Нестандартные решения</span>
+                <p>Принцип — не бояться ломать предопределения и действовать нестандартно — в целом определяет
+                    тактику моей работы.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="services">
+    <div class="line-gold_left"></div>
+    <div class="wrapper">
+        <h2 class="gold">Основные услуги</h2>
+        <ul class="services__list">
+            <li>
+                <img src="./img/icons/serv1.png" alt="">
+                <p>Юридическая оценка и минимизация
+                    рисков внешнеэкономической
+                    деятельности</p>
+            </li>
+            <li>
+                <img src="./img/icons/serv2.png" alt="">
+                <p>Защита участников ВЭД в ходе
+                    таможенных проверок
+                    по административным и уголовным делам</p>
+            </li>
+            <li>
+                <img src="./img/icons/serv3.png" alt="">
+                <p>Обжалование решений таможенного
+                    органа в ведомственном
+                    и судебном порядке</p>
+            </li>
+            <li>
+                <img src="./img/icons/serv4.png" alt="">
+                <p>Защита компаний и их руководителей
+                    по уголовным делам
+                    экономической направленности
+                </p>
+            </li>
+            <li>
+                <img src="./img/icons/serv5.png" alt="">
+                <p>Представление и защита
+                    на территории РФ прав и интересов
+                    иностранных компаний
+                </p>
+            </li>
+            <li>
+                <img src="./img/icons/serv6.png" alt="">
+                <p>Представление и защита
+                    за пределами РФ прав и интересов
+                    российских компаний
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="cases">
+    <div class="line-black_right"></div>
+    <div class="wrapper">
+        <div class="cases__title">
+            <h2>Кейсы</h2>
+            <a href="#" class="cases__link">смотреть все</a>
+        </div>
+        <div class="cases__slider">
+            <div class="cases__item">
+                <p><strong>Взысканы с МВД России в пользу предпринимателя убытки в размере более 4 млн. рублей,</strong>
+                    причинённые вследствие необеспечения органом предварительного следствия сохранности имущества
+                    предпринимателя,
+                    являющегося вещественным доказательством по уголовному делу.
+                    <span>Дело № А76-27807/2016</span>
+                </p>
+            </div>
+            <div class="cases__item">
+                <p><strong>Взысканы с МВД России в пользу предпринимателя убытки в размере более 4 млн. рублей,</strong>
+                    причинённые вследствие необеспечения органом предварительного следствия сохранности имущества
+                    предпринимателя,
+                    являющегося вещественным доказательством по уголовному делу.
+                    <span>Дело № А76-27807/2016</span>
+                </p>
+            </div>
+            <div class="cases__item">
+                <p><strong>Взысканы с МВД России в пользу предпринимателя убытки в размере более 4 млн. рублей,</strong>
+                    причинённые вследствие необеспечения органом предварительного следствия сохранности имущества
+                    предпринимателя,
+                    являющегося вещественным доказательством по уголовному делу.
+                    <span>Дело № А76-27807/2016</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="education">
+    <div class="line-black_left"></div>
+    <div class="wrapper">
+        <div class="wrapper_half">
+            <ul class="education__list">
+                <li>
+                    <span class="education__list__years">1990–1993</span>
+                    <span class="education__list__title">Челябинский юридический техникум</span>
+                    <span>«Бухгалтер-финансист» по специальности<br>
+                        «Государственный бюджет» </span>
+                </li>
+                <li>
+                    <span class="education__list__years">1995–2000</span>
+                    <span class="education__list__title">Челябинский юридический институт</span>
+                    <span>Специальность «Юрист» </span>
+                    <span class="education__list__title">Челябинский юридический институт</span>
+                    <span>Курсы повышения квалификации</span>
+                </li>
+                <li>
+                    <span class="education__list__years">1993–2009</span>
+                    <span class="education__list__title">Министерство внутренних дел РФ</span>
+                    <ul>
+                        <li>следователь по особо важным делам по расследованию уголовных дел
+                            экономической направленности
+                        </li>
+                        <li>заместитель начальника отдела по борьбе с организованной
+                            преступностью в сфере экономики
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="education__list__years">2009–2015</span>
+                    <span class="education__list__title">Федеральная таможенная служба РФ</span>
+                    <span>Руководитель подразделения дознания по расследованию уголовных дел внешнеэкономической направленности.</span>
+                </li>
+                <li>
+                    <span class="education__list__years">2016–</span>
+                    <span class="education__list__title">Адвокатская деятельность</span>
+                    <span>по защите юридических лиц и их руководителей в рамках их предпринимательской, в том числе, внешнеэкономической деятельности.</span>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper_half right">
+            <h2>Образование и опыт</h2>
+            <div class="education__card">
+                <ul class="education__achievements__list">
+                    <li>
+                        <div class="education__img-container">
+                            <img src="./img/icons/28years.png" alt="">
+                        </div>
+                        <p>Общий юридический стаж</p>
+                    </li>
+                    <li>
+                        <div class="education__img-container">
+                            <img src="./img/icons/justige.png" alt="">
+                        </div>
+                        <p>Подполковник юстиции</p>
+                    </li>
+                    <li>
+                        <div class="education__img-container">
+                            <img src="./img/icons/customs.png" alt="">
+                        </div>
+                        <p>Подполковник таможенной службы</p>
+                    </li>
+                </ul>
+                <div class="education__appreciation">
+                    <span class="italic">Выражаю глубокую признательность и уважение своей службе и коллегам в МВД РФ и в ФТС России за полученный бесценный опыт и профессионализм!</span>
+                    <span class="education__signature">Марина Эрзя</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="line-black_left"></div>
+    <div class="wrapper_fullHD">
+        <div class="wrapper">
+            <div class="wrapper_half">
+                <h2>Контакты</h2>
+                <ul class="contacts__list">
+                    <li>
+                        <span class="contacts__item__title">Офис в Санкт-Петербурге</span>
+                        <span class="contacts__item__info">пр. Обуховской Обороны, 86, лит. К, <br>
+                        БЦ «Петровско-Спасская Мануфактура», офис 104-11
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contacts__item__title">Телефоны</span>
+                        <a href="tel:+79043054688" class="contacts__item__info">+7 (904) 305-46-88</a>
+                        <a href="tel:+79310084338" class="contacts__item__info">+7 (931) 008-43-38</a>
+                    </li>
+                    <li>
+                        <span class="contacts__item__title">Электронная почта</span>
+                        <a href="mailto:info@erzya.pro" class="contacts__item__info">info@erzya.pro</a>
+                    </li>
+                    <li>
+                        <a href="#" class="contacts__item__info contacts__item__info_gold">Другие филиалы</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="map" id="YMapsID"></div>
+    </div>
+</section>
 
 <footer>
-  <div class="wrapper">
-    <div class="footer">
+    <div class="wrapper">
+        <div class="footer">
+            <ul class="footer__list">
+                <li>
+                    <a href="#" class="logo_footer">
+                        <img src="./img/icons/logo.png" alt="">
+                        <div class="logo__text">
+                            <span>Марина Эрзя</span>
+                            Бизнесс-адвокат
+                        </div>
+                    </a>
+                </li>
+                <li><a href="tel:+79310084338" class="footer__link">+7 (931) 008-43-38</a></li>
+                <li><a href="mailto:info@erzya.pro" class="footer__link">info@erzya.pro</a></li>
+                <li>
+                    <a href="#callback-modal" class="btn_gold-transparent header__callback" data-fancybox-modal>СВЯЗАТЬСЯ</a>
+<!--                    <button type="button" class="btn_gold-transparent">СВЯЗАТЬСЯ</button>-->
+                </li>
+                <li>
+                    <div class="footer__sm">
+                        <a href="#" class="footer__sm__links">
+                            <img src="./img/icons/inst.png" alt="">
+                        </a>
+                        <a href="#" class="footer__sm__links">
+                            <img src="./img/icons/fb.png" alt="">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
     </div>
-  </div>
 </footer>
 
-<script src="js/scripts.js" type="text/javascript"></script>
+<div id="callback-modal" class="modal modal--callback">
+    <div class="modal__title">Заказать обратный звонок</div>
+    <form method="post" action="/webforms/send/" enctype="multipart/form-data" class="modal-form" data-form-ids="popup">
+
+        <input type="hidden" name="system_email_to" value="814">
+        <div class="modal-form__row">
+            <input type="text" name="data[new][vashe_imya]" placeholder="Ваше имя" class="form-input " required="">
+        </div>
+        <div class="modal-form__row">
+            <input type="text" name="data[new][nomer_telefona]" placeholder="Номер телефона"
+                   class="form-input form-input--tel" required="">
+        </div>
+
+
+        <input type="hidden" name="system_form_id" value="155">
+        <input type="hidden" name="ref_onsuccess" value="/webforms/posted/155">
+        <div class="modal-form__row">
+            <label><input type="checkbox" class="notice_cheked" checked="" name="notice"> Отправляя заявку, я соглашаюсь на
+                обработку персональных данных</label>
+        </div>
+        <div class="modal-form__row">
+            <input type="submit" class="btn btn_gold-transparent" value="Заказать звонок">
+        </div>
+    </form>
+    <button data-fancybox-close="" class="fancybox-close-small" title="Close"></button>
+</div>
+<script defer src="js/jquery.min.js" type="text/javascript"></script>
+<script defer src="js/jquery.fancybox.min.js" type="text/javascript"></script>
+<script defer src="js/slick.min.js" type="text/javascript"></script>
+<script defer src="js/scripts.js" type="text/javascript"></script>
 
 </body>

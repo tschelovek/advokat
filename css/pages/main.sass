@@ -1,0 +1,302 @@
+.hero
+  margin: -118px 0 0
+  padding: 340px 0 72px
+  background: url("../img/bg.jpg") center no-repeat
+  background-size: cover
+  display: flex
+  flex-flow: column
+  align-items: center
+  &__main
+    text-align: center
+    color: #ffffff
+    h1
+      color: $gold
+      font-family: 'Bodoni'
+      font-size: 100px
+      font-weight: 600
+    span
+      font-size: 36px
+  &__achievements
+    margin-top: 100px
+    &__list
+      display: flex
+      justify-content: space-between
+      gap: 24px
+      color: #ffffff
+      font-size: 18px
+    li
+      display: flex
+      align-items: center
+      img
+        margin-right: 12px
+      p
+        max-width: 180px
+
+.principles
+  margin-top: 60px
+  position: relative
+  .line-gold_right
+    position: absolute
+    z-index: -1
+    right: 0
+    left: 40%
+    top: 66px
+    height: 4px
+    background-color: $gold
+  h2
+    background-color: white
+    display: inline-block
+    padding-right: 24px
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 20px
+    counter-reset: section
+    margin-bottom: 80px
+    li
+      background: #ffffff
+      padding: 84px 20px 8px 80px
+      position: relative
+      overflow: hidden
+      &::before
+        counter-increment: section
+        content: "0" counter(section)
+        position: absolute
+        top: 0
+        left: 0
+        font-size: 120px
+        font-family: Bodoni, sans-serif
+        font-weight: 900
+        color: $lightGrey
+        z-index: 5
+      span
+        margin-bottom: 16px
+        display: block
+        position: relative
+        z-index: 15
+        font-family: Bodoni
+        font-size: 36px
+        font-weight: 600
+        line-height: 1
+      p
+        position: relative
+        z-index: 15
+
+.services
+  padding: 68px 0
+  position: relative
+  background-color: $darkGrey
+  color: #ffffff
+  font-size: 13px
+  .line-gold_left
+    position: absolute
+    z-index: 5
+    left: 0
+    right: 50%
+    top: 124px
+    height: 4px
+    background-color: $gold
+  .wrapper
+    display: flex
+    flex-flow: column
+  &__list
+    margin: 80px 0
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    //grid-gap: 20px
+    row-gap: 90px
+    column-gap: 144px
+    li p
+      font-size: 18px
+      margin-top: 8px
+  h2
+    padding-left: 40px
+    display: flex
+    align-self: flex-end
+    z-index: 10
+    background-color: $darkGrey
+
+.cases
+  padding: 60px 0 48px
+  position: relative
+  background-color: $gold
+  .line-black_right
+    position: absolute
+    right: 0
+    left: 50%
+    top: 128px
+    height: 4px
+    background-color: $darkGrey
+  &__item
+    display: block
+    //max-width: 600px
+    span
+      display: block
+      color: $brown
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    h2
+      margin-left: 200px
+      padding-right: 40px
+      position: relative
+      //background-color: $gold
+  &__link
+    padding: 20px 20px 0
+    position: relative
+    color: $darkGrey
+    font-size: 16px
+    font-weight: 700
+    text-decoration: none
+    background-color: $gold
+  .wrapper
+    background: url('../img/case.png') center left no-repeat
+    background-size: contain
+  &__slider
+    margin-top: 16px
+  .slick-list
+    margin: 0 360px
+  .slick-arrow
+    display: flex
+    align-items: center
+    top: 0
+    font-size: 30px
+    font-family: Bodoni
+    font-weight: 600
+    color: white
+    &.slick-disabled
+      visibility: hidden
+  .slick-next
+    top: 0
+    text-align: right
+    &::after
+      margin-left: 24px
+      content: url("../img/strelka.png")
+  .slick-prev
+    left: 0
+    text-align: left
+    &::before
+      margin-right: 24px
+      content: url("../img/strelka.png")
+      transform: rotate(180deg)
+
+
+.education
+  margin-top: 60px
+  padding-bottom: 100px
+  position: relative
+  .line-black_left
+    position: absolute
+    z-index: 5
+    left: 0
+    right: 50%
+    top: 72px
+    height: 4px
+    background-color: $textBlack
+  & .wrapper
+    display: flex
+    &_half.right
+      display: flex
+      flex-flow: column
+      align-items: flex-end
+  &__list
+    &__years
+      margin-left: -20px
+      padding: 0 36px 0 20px
+      display: inline-block
+      position: relative
+      color: $gold
+      background-color: white
+      font-family: Bodoni
+      font-size: 46px
+      font-weight: 600
+      line-height: 1
+      z-index: 10
+    &__title
+      display: block
+      margin-top: 18px
+      font-size: 22px
+      font-weight: 600
+    & > li
+      margin-top: 50px
+  &__card
+    padding: 20px 60px 60px
+    margin-left: auto
+    position: relative
+    max-width: 410px
+    border: 3px solid $lightGrey
+    background: url('../img/quots.png') bottom 60px right 60px no-repeat
+  &__achievements__list
+    padding: 0 0 45px
+    margin-bottom: 42px
+    border-bottom: 3px solid $lightGrey
+    li
+      margin-top: 40px
+      display: flex
+      align-items: center
+      color: $gold
+      font-weight: 800
+  &__img-container
+    max-width: 100px
+    width: 100%
+  h2
+    position: relative
+    margin-top: 16px
+    text-align: right
+    z-index: 10
+    background-color: white
+  &__signature
+    margin-top: 12px
+    display: block
+    font-weight: 600
+
+
+.contacts
+  //padding-top: 36px
+  position: relative
+  //background: linear-gradient(to right, $lightestGrey 40%, white 40%)
+  background-color: $lightestGrey
+  .line-black_left
+    position: absolute
+    z-index: 5
+    left: 0
+    right: 80%
+    top: 96px
+    height: 4px
+    background-color: $textBlack
+  .wrapper
+    display: flex
+    .wrapper_half
+      z-index: 15
+      background-color: $lightestGrey
+  &__list
+    margin-top: 8px
+    li
+      margin-top: 24px
+  &__item
+    &__title
+      //margin-top: 28px
+      display: block
+      color: $gold
+      font-weight: 600
+      font-size: 18px
+    &__info
+      display: block
+      font-size: 18px
+      line-height: 1.3
+      color: $textBlack
+      text-decoration: none
+      &_gold
+        margin-bottom: 24px
+        font-weight: 600
+        color: $gold
+        display: inline-block
+        border-bottom: 2px solid $gold
+
+  h2
+    margin: 16px 0 0 -20px
+    padding-left: 20px
+    position: relative
+    z-index: 10
+    background-color: $lightestGrey
