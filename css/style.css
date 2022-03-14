@@ -85,7 +85,6 @@ header {
   position: relative;
 }
 header a {
-  color: #cc9966;
   text-decoration: none;
 }
 
@@ -341,6 +340,21 @@ header a {
   font-weight: 600;
 }
 
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  filter: brightness(0.5);
+}
+.video-bg__file {
+  display: block;
+  height: auto;
+}
+
 #map, #YMapsID {
   position: absolute;
   top: 0;
@@ -366,9 +380,29 @@ header a {
   justify-content: space-between;
   align-items: center;
 }
-.header__link {
+.header__link, .header .logo_header {
+  color: #cc9966;
   font-size: 18px;
   font-weight: 600;
+}
+.header__nav {
+  padding: 32px;
+  background: #252525;
+  display: none;
+  position: absolute;
+  right: -110%;
+  top: 0;
+  width: 100%;
+  -webkit-transition: right 0.6s ease-in-out 0.1s;
+  -moz-transition: right 0.6s ease-in-out 0.1s;
+  -ms-transition: right 0.6s ease-in-out 0.1s;
+  -o-transition: right 0.6s ease-in-out 0.1s;
+  transition: right 0.6s ease-in-out 0.1s;
+  z-index: 30;
+}
+.header__nav.active {
+  display: block;
+  right: 0;
 }
 
 footer {
@@ -486,204 +520,80 @@ footer {
   display: block;
 }
 
-.headerNav_adaptive {
-  display: none;
-}
-
-.adaptive-menu-toggle {
-  display: block;
-  width: 30px;
-  height: 24px;
-  z-index: 99;
-  position: relative;
-  margin: auto;
-}
-
-.menu-toggle-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.menu-toggle-line {
-  position: absolute;
-  background: #cc9966;
-  display: block;
-  margin: auto;
-  height: 4px;
-  width: 100%;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.menu-toggle-line--1 {
-  top: 0;
-  -moz-transition: width 0.2s ease 0.3s;
-  -o-transition: width 0.2s ease 0.3s;
-  -webkit-transition: width 0.2s ease 0.3s;
-  transition: width 0.2s ease 0.3s;
-}
-
-.menu-toggle-line--2 {
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  -moz-transition: width 0.2s ease 0.3s;
-  -o-transition: width 0.2s ease 0.3s;
-  -webkit-transition: width 0.2s ease 0.3s;
-  transition: width 0.2s ease 0.3s;
-}
-
-.menu-toggle-line--3 {
-  bottom: 0;
-  -moz-transition: width 0.2s ease 0.3s;
-  -o-transition: width 0.2s ease 0.3s;
-  -webkit-transition: width 0.2s ease 0.3s;
-  transition: width 0.2s ease 0.3s;
-}
-
-.menu-toggle-line--4,
-.menu-toggle-line--5 {
-  opacity: 0;
-  top: 10px;
-}
-
-.menu-toggle-line--4 {
-  -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
-  transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
-  -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s;
-  -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s;
-}
-
-.menu-toggle-line--5 {
-  -webkit-transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
-  transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
-  -o-transition: opacity 0.2s ease 0s, -o-transform 0.2s ease 0s;
-  -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s;
-}
-
-.adaptive-menu-toggle--open .menu-toggle-line {
-  background: white;
-}
-
-.adaptive-menu-toggle--open .menu-toggle-line--1 {
-  width: 0;
-  -moz-transition: width 0.2s ease 0s;
-  -o-transition: width 0.2s ease 0s;
-  -webkit-transition: width 0.2s ease 0s;
-  transition: width 0.2s ease 0s;
-}
-
-.adaptive-menu-toggle--open .menu-toggle-line--2 {
-  width: 0;
-  -moz-transition: width 0.2s ease 0.1s;
-  -o-transition: width 0.2s ease 0.1s;
-  -webkit-transition: width 0.2s ease 0.1s;
-  transition: width 0.2s ease 0.1s;
-}
-
-.adaptive-menu-toggle--open .menu-toggle-line--3 {
-  width: 0;
-  -moz-transition: width 0.2s ease 0.2s;
-  -o-transition: width 0.2s ease 0.2s;
-  -webkit-transition: width 0.2s ease 0.2s;
-  transition: width 0.2s ease 0.2s;
-}
-
-.adaptive-menu-toggle--open .menu-toggle-line--4 {
-  opacity: 1;
-  -moz-transform: rotate(45deg) translateZ(0);
-  -ms-transform: rotate(45deg) translateZ(0);
-  -o-transform: rotate(45deg) translateZ(0);
-  -webkit-transform: rotate(45deg) translateZ(0);
-  transform: rotate(45deg) translateZ(0);
-  -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
-  transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
-  -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s;
-  -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s;
-}
-
-.adaptive-menu-toggle--open .menu-toggle-line--5 {
-  opacity: 1;
-  -moz-transform: rotate(-45deg) translateZ(0);
-  -ms-transform: rotate(-45deg) translateZ(0);
-  -o-transform: rotate(-45deg) translateZ(0);
-  -webkit-transform: rotate(-45deg) translateZ(0);
-  transform: rotate(-45deg) translateZ(0);
-  -webkit-transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s;
-  transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s;
-  -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s;
-  -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s;
-}
-
-.headerNav_adaptive {
-  background: #cc9966;
-  display: none;
-  padding-top: 60px;
-  position: absolute;
-  left: 15px;
-  right: 15px;
-  top: 0;
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  z-index: 3;
-}
-.headerNav_adaptive ul {
-  list-style: none;
-  margin: 0;
+#burger_button {
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 30px;
+  height: 23px;
+  font-size: 0;
+  background-color: inherit;
+  border: none;
+  z-index: 15;
 }
-.headerNav_adaptive .address p {
-  font-size: 22px;
-  font-family: sans-serif;
-  font-weight: 400;
-  color: #000000;
-  line-height: 1.5;
-  background: #ffffff;
-  padding: 10px;
-}
-
-.header_opened {
-  display: block !important;
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.headerNav_adaptive a {
-  background: #cc9966;
-  border: #000000 1px solid;
-  border-bottom: none;
+#burger_button span {
   display: block;
-  font-size: 22px;
-  font-family: sans-serif;
-  font-weight: 400;
-  color: #000000;
-  line-height: 1.5;
-  padding: 10px;
-  text-decoration: none;
+  width: 100%;
+  height: 3px;
+  background-color: #cc9966;
+  transition: all 0.3s;
+}
+#burger_button span::before, #burger_button span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #cc9966;
+  transition: all 0.3s;
+}
+#burger_button span::before {
+  top: 0;
+}
+#burger_button span::after {
+  bottom: 0;
 }
 
-.headerNav_adaptive li:last-child a {
-  border-bottom: #000000 1px solid;
+.nav__list {
+  margin-top: 24px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.nav__list li {
+  padding: 8px 24px;
+}
+.nav__list li:first-child {
+  font-size: 24px;
+}
+.nav__list_1 {
+  color: white;
+  font-size: 30px;
+}
+.nav__list_1 a {
+  color: white;
+}
+.nav__list_2 {
+  color: #cc9966;
+}
+.nav__list_2__title {
+  font-weight: 600;
+}
+.nav__list_2 a {
+  color: #cc9966;
+}
+.nav__list_2 li {
+  display: flex;
+  flex-flow: column;
 }
 
 /* PAGES */
 .hero {
   margin: -118px 0 0;
   padding: 340px 0 72px;
-  background: url("../img/bg.jpg") center no-repeat;
+  position: relative;
   background-size: cover;
   display: flex;
   flex-flow: column;
@@ -1036,6 +946,10 @@ footer {
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1200px) {
+  .hero {
+    padding: 300px 0 40px;
+  }
+
   .principles__list {
     grid-template-columns: 1fr;
   }
@@ -1065,6 +979,9 @@ footer {
     font-size: 14px;
   }
 
+  .hero {
+    padding: 240px 0 32px;
+  }
   .hero__achievements {
     margin-top: 40px;
   }
@@ -1220,6 +1137,11 @@ footer {
   }
   .cases .slick-list {
     margin: 0 40px;
+  }
+}
+@media only screen and (min-width: 1380px) {
+  .video-bg__file {
+    width: 100%;
   }
 }
 
