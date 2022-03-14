@@ -587,6 +587,7 @@ footer {
 .nav__list_2 li {
   display: flex;
   flex-flow: column;
+  max-width: 440px;
 }
 
 /* PAGES */
