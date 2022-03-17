@@ -52,7 +52,7 @@ $(document).ready(() => {
         setTimeout(function() { menuContainer.style.display = '' }, 600)
     });
 
-    $('[class^="YMapsID"]').find('[class$="YMaps-layer-container"]').css('filter', 'grayscale(100%)');
+    // $('[class^="YMapsID"]').find('[class$="YMaps-layer-container"]').css('filter', 'grayscale(100%)');
 
     /**
      * FANCYBOX
