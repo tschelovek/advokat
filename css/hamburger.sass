@@ -1,141 +1,87 @@
 @import "prefixes"
-//@import "variables"
-
-//.header__hamburger, .headerNav_adaptive
-//  display: none
-.headerNav_adaptive
-  display: none
-
-.adaptive-menu-toggle
-  display: block
-  width: 30px
-  height: 24px
-  z-index: 99
-  position: relative
-  margin: auto
-
-.menu-toggle-inner
-  width: 100%
-  height: 100%
-  position: absolute
-  left: 0
-  top: 0
-  right: 0
-  bottom: 0
-  margin: auto
-
-.menu-toggle-line
-  position: absolute
-  background: $gold
-  display: block
-  margin: auto
-  height: 4px
-  width: 100%
-  +border-radius(3px)
-
-.menu-toggle-line--1
-  top: 0
-  @include transition(width 0.2s ease 0.3s)
-
-
-.menu-toggle-line--2
-  top: 0
-  bottom: 0
-  margin: auto
-  @include transition(width 0.2s ease 0.3s)
-
-.menu-toggle-line--3
-  bottom: 0
-  @include transition(width 0.2s ease 0.3s)
-
-.menu-toggle-line--4,
-.menu-toggle-line--5
-  opacity: 0
-  top: 10px
-
-.menu-toggle-line--4
-  -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
-  transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
-  -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s
-  -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s
-
-.menu-toggle-line--5
-  -webkit-transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s
-  transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s
-  -o-transition: opacity 0.2s ease 0s, -o-transform 0.2s ease 0s
-  -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s
-
-.adaptive-menu-toggle--open .menu-toggle-line
-  background: white
-
-.adaptive-menu-toggle--open .menu-toggle-line--1
-  width: 0
-  @include transition(width 0.2s ease 0s)
-
-.adaptive-menu-toggle--open .menu-toggle-line--2
-  width: 0
-  @include transition(width 0.2s ease 0.1s)
-
-.adaptive-menu-toggle--open .menu-toggle-line--3
-  width: 0
-  @include transition(width 0.2s ease 0.2s)
-
-.adaptive-menu-toggle--open .menu-toggle-line--4
-  opacity: 1
-  +transform(rotate(45deg) translateZ(0))
-  -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
-  transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s
-  -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s
-  -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s
-
-.adaptive-menu-toggle--open .menu-toggle-line--5
-  opacity: 1
-  +transform(rotate(-45deg) translateZ(0))
-  -webkit-transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s
-  transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s
-  -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s
-  -moz-transition: opacity 0.2s ease 0.4s, transform 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s
-
-//@media only screen and (max-width: 1200px)
-  //.header__hamburger
-  //  display: block !important
-  //  position: absolute
-  //  right: 10px
-  //  top: 20px
-
-.headerNav_adaptive
-  background: $gold
-  display: none
-  padding-top: 60px
-  position: absolute
-  left: 15px
-  right: 15px
-  top: 0
-  +transform(translateX(-100%))
-  z-index: 3
-
-  ul
-    list-style: none
-    margin: 0
+#burger
+  &_button
     padding: 0
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    position: relative
+    width: 30px
+    height: 23px
+    font-size: 0
+    background-color: inherit
+    border: none
+    z-index: 15
+    span
+      display: block
+      width: 100%
+      height: 3px
+      background-color: $gold
+      transition: all 0.3s
+      &::before, &::after
+        content: ''
+        position: absolute
+        right: 0
+        display: block
+        width: 100%
+        height: 3px
+        background-color: $gold
+        transition: all 0.3s
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+  &_close
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    position: relative
+    width: 30px
+    height: 23px
+    font-size: 0
+    background-color: inherit
+    border: none
+    z-index: 15
+    span
+      display: block
+      width: 100%
+      height: 3px
+      background-color: $gold
+      transition: all 0.3s
+      transform: rotate(45deg)
+      &::before
+        content: ''
+        position: absolute
+        right: 0
+        display: block
+        width: 100%
+        height: 3px
+        background-color: $gold
+        transition: all 0.3s
+        transform: rotate(90deg)
 
-  .address p
-    @include font($textBlack)
-    background: $white
-    padding: 10px
-
-.header_opened
-  display: block !important
-  +transform(translateX(0))
-
-.headerNav_adaptive a
-  background: $gold
-  border: $textBlack 1px solid
-  border-bottom: none
-  display: block
-  @include font($textBlack)
-  padding: 10px
-  text-decoration: none
-
-.headerNav_adaptive li:last-child a
-  border-bottom: $textBlack 1px solid
+.nav
+  &__list
+    margin-top: 24px
+    display: flex
+    flex-flow: row wrap
+    li
+      padding: 8px 24px
+      &:first-child
+        font-size: 24px
+    &_1
+      color: white
+      font-size: 30px
+      a
+        color: white
+    &_2
+      color: $gold
+      &__title
+        font-weight: 600
+      a
+        color: $gold
+      li
+        display: flex
+        flex-flow: column
+        max-width: 440px

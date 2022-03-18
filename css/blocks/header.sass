@@ -5,6 +5,28 @@
     display: flex
     justify-content: space-between
     align-items: center
-  &__link
+  &__link, .logo_header
+    color: $gold
     font-size: 18px
     font-weight: 600
+  &__nav
+    padding: 32px
+    background: $darkGrey
+    display: none
+    position: absolute
+    right: -110%
+    top: 0
+    height: 100vh
+    width: 100%
+    -webkit-transition: right 0.6s ease-in-out 0.1s
+    -moz-transition: right 0.6s ease-in-out 0.1s
+    -ms-transition: right 0.6s ease-in-out 0.1s
+    -o-transition: right 0.6s ease-in-out 0.1s
+    transition: right 0.6s ease-in-out 0.1s
+    z-index: 30
+    opacity: 0.9
+    &.active
+      display: block
+      right: 0
+    .wrapper
+      opacity: unset

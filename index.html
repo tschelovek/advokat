@@ -19,6 +19,51 @@
 <body>
 
 <header>
+    <nav class="header__nav nav" id="nav">
+        <div class="wrapper">
+            <button type="button" id="burger_close">
+                <span>close</span>
+            </button>
+            <ul class="nav__list nav__list_1">
+                <li>Меню:</li>
+                <li><a href="#">Об адвокате</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Партнёры</a></li>
+                <li><a href="#">Практика</a></li>
+                <li><a href="#">Публикации</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="nav__list nav__list_2">
+            <li>Контактная информация:</li>
+            <li>
+                <span class="nav__list_2__title">Телефоны</span>
+                <a href="tel:+79043054688" class="nav__list__link">+7 (904) 305-46-88</a>
+                <a href="tel:+79043054688" class="nav__list__link">+7 (904) 305-46-88</a>
+            </li>
+            <li>
+                <span class="nav__list_2__title">Электронная почта</span>
+                <a href="mailto:info@erzya.pro" class="nav__list__link">info@erzya.pro</a>
+            </li>
+            <li>
+                <span class="nav__list_2__title">Офис в Санкт-Петербурге</span>
+                <span>пр. Обуховской Обороны,
+                    86, лит. К, БЦ «Петровско-Спасская Мануфактура», офис 104-11</span>
+            </li>
+            <li>
+                <span class="nav__list_2__title">Социальные сети</span>
+                <a href="mailto:info@erzya.pro" class="nav__list__link">info@erzya.pro</a>
+            </li>
+            <li>
+                <span class="nav__list_2__title">Выбор языка</span>
+                <div class="language-selector">
+                    <a href="#" class="button_language-selector active">русский</a>
+                    <a href="#" class="button_language-selector">english</a>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
     <div class="wrapper">
         <div class="header">
 
@@ -46,40 +91,23 @@
                 </li>
                 <li>
                     <div class="header__hamburger">
-                        <a class="adaptive-menu-toggle" href="#">
-                            <span class="menu-toggle-inner">
-                                <span class="menu-toggle-line menu-toggle-line--1"></span>
-                                <span class="menu-toggle-line menu-toggle-line--2"></span>
-                                <span class="menu-toggle-line menu-toggle-line--3"></span>
-                                <span class="menu-toggle-line menu-toggle-line--4"></span>
-                                <span class="menu-toggle-line menu-toggle-line--5"></span>
-                              </span>
-                        </a>
+                        <button type="button" id="burger_button">
+                            <span>menu</span>
+                        </button>
                     </div>
                 </li>
             </ul>
 
-            <nav class="headerNav_adaptive">
-                <ul class="nav">
-                    <li>
-                        <a href="#">Наши услуги</a>
-                    </li>
-                    <li>
-                        <a href="#">Цены</a>
-                    </li>
-                    <li>
-                        <a href="#">Информация</a>
-                    </li>
-                    <li>
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </div>
 </header>
 
 <section class="hero">
+    <div class="video-bg">
+        <video class="video-bg__file" playsinline webkit-playsinline autoplay muted preload="auto" poster loop="loop">
+            <source src="./video/video_bg1.mp4" type="video/mp4">
+        </video>
+    </div>
     <div class="wrapper">
         <div class="hero__main">
             <h1>Марина Эрзя</h1>
