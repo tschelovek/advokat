@@ -23,7 +23,6 @@ body
       max-width: 1920px
       margin: 0 auto
       position: relative
-
     &_half
       width: 50%
 
@@ -278,3 +277,14 @@ header
 .YMaps-layer-container
   filter: grayscale(100%)
   -webkit-filter: grayscale(1)
+
+.line
+  position: absolute
+  z-index: -1
+  height: 4px
+  &-gold_right
+    background-color: $gold
+    right: 0
+  &-gold_left
+    background-color: $gold
+    left: 0
