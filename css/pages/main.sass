@@ -109,6 +109,20 @@
     z-index: 10
     background-color: $darkGrey
 
+  &_page
+    margin: 20px 0
+    position: relative
+    .line-gold_right
+      left: 30%
+      top: 124px
+    h1
+      margin: 60px 0
+      padding-right: 20px
+      display: inline-block
+      font-size: 100px
+      font-family: Bodoni
+      line-height: 1
+      background-color: white
 
 .cases
   padding: 60px 0 48px
@@ -325,30 +339,3 @@
     .wrapper_fullHD
       margin-bottom: 80px
 
-.accordion
-  display: flex
-  flex-flow: column
-  background-color: white
-  &__item
-    height: 212px
-    overflow: hidden
-    transition: height 0.6s ease-in
-    &.active
-      height: auto
-      .accordion__item__text::after
-        content: unset
-    &__text
-      position: relative
-      max-width: 940px
-      overflow: hidden
-      &::after
-        position: absolute
-        content: ''
-        //bottom: 0
-        height: 140px
-        top: 0
-        right: 0
-        left: 0
-        background: linear-gradient(to top, white, rgba(255,255,255,0))
-  h2
-    font-size: 30px

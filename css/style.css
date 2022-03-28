@@ -519,6 +519,102 @@ header.header_main {
   width: 100%;
 }
 
+.accordion {
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  border: 3px solid #ebebeb;
+}
+.accordion__item {
+  padding-bottom: 36px;
+  display: flex;
+  position: relative;
+  height: 212px;
+  overflow: hidden;
+  transition: height 0.6s ease-in;
+}
+.accordion__item::after {
+  position: absolute;
+  content: "";
+  height: 90px;
+  bottom: 0;
+  right: 160px;
+  left: 0;
+  background: linear-gradient(to top, white, white 20px, rgba(255, 255, 255, 0));
+}
+.accordion__item:not(:last-child) {
+  border-bottom: 3px solid #ebebeb;
+}
+.accordion__item:hover .accordion__arrow_down__container {
+  transform: translateY(16px);
+}
+.accordion__item.active {
+  height: auto;
+}
+.accordion__item.active::after {
+  content: unset;
+}
+.accordion__item.active .accordion__arrow_down__container {
+  display: none;
+}
+.accordion__item.active .accordion__arrow_down__container::before {
+  content: url("../img/strelka_down.png");
+}
+.accordion__item.active .accordion__arrow_up__container {
+  display: flex;
+  flex-flow: column;
+}
+.accordion__item.active .accordion__arrow_up__container::before {
+  content: url("../img/strelka_up.png");
+}
+.accordion__item__text {
+  position: relative;
+  max-width: 940px;
+  overflow: hidden;
+  font-size: 18px;
+}
+.accordion__item h2 {
+  padding: 32px 0;
+  font-size: 30px;
+  line-height: 1;
+}
+.accordion__icon-container {
+  width: 120px;
+  flex: none;
+  background-repeat: no-repeat;
+  background-position: top 40px left 45%;
+}
+.accordion__arrow-container {
+  display: flex;
+  flex: none;
+  width: 200px;
+  height: inherit;
+}
+.accordion__arrow_down__container {
+  margin: auto;
+  transition: transform 0.3s;
+}
+.accordion__arrow_down__container::before {
+  content: url("../img/strelka_down.png");
+}
+.accordion__arrow_up__container {
+  margin: auto auto 0;
+  display: none;
+}
+.accordion__arrow_up__container::before {
+  content: url("../img/strelka_up.png");
+}
+.accordion__arrow_up__container span {
+  padding-right: 8px;
+  writing-mode: tb;
+  transform: rotate(180deg);
+  font-family: Bodoni;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  max-height: 100px;
+}
+
 .header {
   padding: 20px 0 30px;
   position: relative;
@@ -907,6 +1003,23 @@ footer {
   z-index: 10;
   background-color: #252525;
 }
+.services_page {
+  margin: 20px 0;
+  position: relative;
+}
+.services_page .line-gold_right {
+  left: 30%;
+  top: 124px;
+}
+.services_page h1 {
+  margin: 60px 0;
+  padding-right: 20px;
+  display: inline-block;
+  font-size: 100px;
+  font-family: Bodoni;
+  line-height: 1;
+  background-color: white;
+}
 
 .cases {
   padding: 60px 0 48px;
@@ -1162,40 +1275,6 @@ footer {
 }
 .contacts_page .wrapper_fullHD {
   margin-bottom: 80px;
-}
-
-.accordion {
-  display: flex;
-  flex-flow: column;
-  background-color: white;
-}
-.accordion__item {
-  height: 212px;
-  overflow: hidden;
-  transition: height 0.6s ease-in;
-}
-.accordion__item.active {
-  height: auto;
-}
-.accordion__item.active .accordion__item__text::after {
-  content: unset;
-}
-.accordion__item__text {
-  position: relative;
-  max-width: 940px;
-  overflow: hidden;
-}
-.accordion__item__text::after {
-  position: absolute;
-  content: "";
-  height: 140px;
-  top: 0;
-  right: 0;
-  left: 0;
-  background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
-}
-.accordion h2 {
-  font-size: 30px;
 }
 
 .about {
@@ -1642,6 +1721,14 @@ footer {
   .callback h2 {
     margin: -18px 0 8px;
   }
+
+  .accordion__item h2 {
+    padding: 24px 0;
+    font-size: 24px;
+  }
+  .accordion__arrow-container {
+    width: 160px;
+  }
 }
 @media only screen and (max-width: 800px) {
   h2 {
@@ -1681,6 +1768,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 56px;
     row-gap: 80px;
+  }
+  .services_page .line-gold_right {
+    top: 82px;
+  }
+  .services_page h1 {
+    margin: 48px 0;
+    font-size: 60px;
   }
 
   .partners .line-gold_right {
@@ -1734,6 +1828,23 @@ footer {
 
   .contacts_page h2 {
     font-size: 32px;
+  }
+
+  .accordion__item {
+    height: 260px;
+  }
+  .accordion__item::after {
+    right: 120px;
+  }
+  .accordion__item h2 {
+    padding: 20px 0;
+    font-size: 22px;
+  }
+  .accordion__icon-container {
+    width: 90px;
+  }
+  .accordion__arrow-container {
+    width: 140px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -1805,6 +1916,16 @@ footer {
   .practice h2 {
     margin-top: 32px;
     font-size: 32px;
+  }
+
+  .accordion__item {
+    padding-right: 16px;
+  }
+  .accordion__item::after {
+    right: 0;
+  }
+  .accordion__arrow-container {
+    display: none;
   }
 }
 @media only screen and (min-width: 1380px) {

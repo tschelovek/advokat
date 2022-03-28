@@ -27,10 +27,17 @@
     &__title h2
       margin-left: unset
 
-  .services__list
-    grid-template-columns: repeat(2, 1fr)
-    column-gap: 56px
-    row-gap: 80px
+  .services
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 56px
+      row-gap: 80px
+    &_page
+      .line-gold_right
+        top: 82px
+      h1
+        margin: 48px 0
+        font-size: 60px
 
   .partners
     .line-gold_right
@@ -74,4 +81,18 @@
     &_page
       h2
         font-size: 32px
+
+  .accordion
+    &__item
+      height: 260px
+      &::after
+        right: 120px
+      h2
+        padding: 20px 0
+        font-size: 22px
+    &__icon-container
+      width: 90px
+    &__arrow-container
+      width: 140px
+
 

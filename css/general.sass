@@ -393,3 +393,85 @@ header
     padding: 20px 24px
     width: 100%
 
+.accordion
+  display: flex
+  flex-flow: column
+  background-color: white
+  border: 3px solid $lightestGrey
+  &__item
+    padding-bottom: 36px
+    display: flex
+    position: relative
+    height: 212px
+    overflow: hidden
+    transition: height 0.6s ease-in
+    &::after
+      position: absolute
+      content: ''
+      height: 90px
+      bottom: 0
+      right: 160px
+      left: 0
+      background: linear-gradient(to top, white, white 20px, rgba(255,255,255,0))
+    &:not(:last-child)
+      border-bottom: 3px solid $lightestGrey
+    &:hover
+      .accordion__arrow_down__container
+        transform: translateY(16px)
+    &.active
+      height: auto
+      &::after
+        content: unset
+      .accordion
+        &__arrow
+          &_down__container
+            display: none
+            &::before
+              content: url("../img/strelka_down.png")
+          &_up__container
+            display: flex
+            flex-flow: column
+            &::before
+              content: url("../img/strelka_up.png")
+    &__text
+      position: relative
+      max-width: 940px
+      overflow: hidden
+      font-size: 18px
+    h2
+      padding: 32px 0
+      font-size: 30px
+      line-height: 1
+  &__icon-container
+    width: 120px
+    flex: none
+    background-repeat: no-repeat
+    background-position: top 40px left 45%
+  &__arrow
+    &-container
+      display: flex
+      flex: none
+      //justify-content: center
+      width: 200px
+      height: inherit
+    &_down__container
+      margin: auto
+      transition: transform 0.3s
+      &::before
+        content: url("../img/strelka_down.png")
+    &_up__container
+      margin: auto auto 0
+      display: none
+      &::before
+        content: url("../img/strelka_up.png")
+      span
+        padding-right: 8px
+        writing-mode: tb
+        transform: rotate(180deg)
+        font-family: Bodoni
+        font-weight: 600
+        font-size: 24px
+        line-height: 1
+        max-height: 100px
+
+
