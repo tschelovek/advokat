@@ -64,30 +64,107 @@ $(document).ready(() => {
     });
 
     /**
+     * FILE INPUT
+     */
+    $('input[type=file] ~ label').on('click', (e) => {
+        console.log('test')
+        $(e.target).siblings('input').trigger('click');
+    });
+
+    $('input[type="file"]').on('change', (e) => {
+        let input = $(e.target);
+        let container = input.parents('form');
+        let name = e.currentTarget.files[0].name;
+
+        if (!name) {
+            return;
+        }
+
+        container.find(('.form__file-name')).text(name);
+        container.find('.btn__delete-file').css('display', 'inline-block');
+    });
+
+    $('.btn__delete-file').on('click', (e) => {
+        let parent = $(e.target).parents('form');
+
+        parent.find('input[type="file"]').val(null);
+        parent.find('.form__file-name').text('');
+        parent.find('.btn__delete-file').css('display', 'none');
+    });
+
+    /**
      * YANDEX.MAPS API
      */
-    // Создает обработчик события window.onLoad
-    YMaps.jQuery(function () {
-        // Создает экземпляр карты и привязывает его к созданному контейнеру
-        let map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+    if(document.getElementById('YMapsID')) {
+        YMaps.jQuery(function () {
+            // Создает экземпляр карты и привязывает его к созданному контейнеру
+            let map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
 
-        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
-        map.setCenter(new YMaps.GeoPoint(30.308026, 59.955466), 17);
-        var myPlacemark = new YMaps.Placemark(new YMaps.GeoPoint(30.308026, 59.955466), {draggable: 1,
-            hintOptions: {
-                maxWidth: 100,
-                showTimeout: 200,
-                offset: new YMaps.Point(5, 5)
-            },
-            balloonOptions: {
-                maxWidth: 70,
-                hasCloseButton: false,
-                mapAutoPan: 0
+            // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+            map.setCenter(new YMaps.GeoPoint(30.308026, 59.955466), 17);
+            let myPlacemark = new YMaps.Placemark(new YMaps.GeoPoint(30.308026, 59.955466), {
+                draggable: 1,
+                hintOptions: {
+                    maxWidth: 100,
+                    showTimeout: 200,
+                    offset: new YMaps.Point(5, 5)
+                },
+                balloonOptions: {
+                    maxWidth: 70,
+                    hasCloseButton: false,
+                    mapAutoPan: 0
+                }
+            });
+            myPlacemark.name = "Advokat";
+
+            map.addOverlay(myPlacemark);
+
+        })
+    }
+    if(document.getElementById('YMapsID2')) {
+        YMaps.jQuery(function () {
+            // Создает экземпляр карты и привязывает его к созданному контейнеру
+            let map2 = new YMaps.Map(YMaps.jQuery("#YMapsID2")[0]);
+
+            // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+            map2.setCenter(new YMaps.GeoPoint(61.411528, 55.166390), 17);
+            let myPlacemark = new YMaps.Placemark(new YMaps.GeoPoint(61.411528, 55.166390), {
+                draggable: 1,
+                hintOptions: {
+                    maxWidth: 100,
+                    showTimeout: 200,
+                    offset: new YMaps.Point(5, 5)
+                },
+                balloonOptions: {
+                    maxWidth: 70,
+                    hasCloseButton: false,
+                    mapAutoPan: 0
+                }
+            });
+            myPlacemark.name = "Advokat";
+
+            map2.addOverlay(myPlacemark);
+
+        })
+    }
+
+    /**
+     * Accordion
+     */
+    let accordion = document.getElementById('freakingGoodAccordion');
+    if (accordion) {
+        let accordionItems = accordion.querySelectorAll('.accordion__item');
+        accordionItems.forEach(item => item.addEventListener('click', () => {
+            if (item.classList.contains('active')) {
+                item.classList.toggle('active')
+            } else {
+                accordionItems.forEach(item => item.classList.remove('active'));
+                item.classList.add('active')
             }
-        });
-        myPlacemark.name = "Advokat";
-
-        map.addOverlay(myPlacemark);
-
-    })
+        }))
+        // function setDataHeight(element) {
+        //     let height = element.offsetHeight;
+        //     element.dataset.height = height
+        // }
+    }
 });

@@ -38,13 +38,8 @@
   margin-top: 60px
   position: relative
   .line-gold_right
-    position: absolute
-    z-index: -1
-    right: 0
     left: 40%
     top: 66px
-    height: 4px
-    background-color: $gold
   h2
     background-color: white
     display: inline-block
@@ -91,13 +86,9 @@
   color: #ffffff
   font-size: 13px
   .line-gold_left
-    position: absolute
     z-index: 5
-    left: 0
     right: 50%
     top: 124px
-    height: 4px
-    background-color: $gold
   .wrapper
     display: flex
     flex-flow: column
@@ -118,16 +109,29 @@
     z-index: 10
     background-color: $darkGrey
 
+  &_page
+    margin: 20px 0
+    position: relative
+    .line-gold_right
+      left: 30%
+      top: 124px
+    h1
+      margin: 60px 0
+      padding-right: 20px
+      display: inline-block
+      font-size: 100px
+      font-family: Bodoni
+      line-height: 1
+      background-color: white
+
 .cases
   padding: 60px 0 48px
   position: relative
   background-color: $gold
   .line-black_right
-    position: absolute
     right: 0
     left: 50%
     top: 128px
-    height: 4px
     background-color: $darkGrey
   &__item
     display: block
@@ -143,7 +147,6 @@
       margin-left: 200px
       padding-right: 40px
       position: relative
-      //background-color: $gold
   &__link
     padding: 20px 20px 0
     position: relative
@@ -151,7 +154,7 @@
     font-size: 16px
     font-weight: 700
     text-decoration: none
-    background-color: $gold
+    background-color: transparent
   .wrapper
     background: url('../img/case.png') center left no-repeat
     background-size: contain
@@ -183,18 +186,15 @@
       content: url("../img/strelka.png")
       transform: rotate(180deg)
 
-
 .education
   margin-top: 60px
   padding-bottom: 100px
   position: relative
   .line-black_left
-    position: absolute
     z-index: 5
     left: 0
     right: 50%
     top: 72px
-    height: 4px
     background-color: $textBlack
   & .wrapper
     display: flex
@@ -230,7 +230,7 @@
     border: 3px solid $lightGrey
     background: url('../img/quots.png') bottom 60px right 60px no-repeat
   &__achievements__list
-    padding: 0 0 45px
+    padding: 0 0 44px
     margin-bottom: 42px
     border-bottom: 3px solid $lightGrey
     li
@@ -258,12 +258,10 @@
   position: relative
   background-color: $lightestGrey
   .line-black_left
-    position: absolute
     z-index: 5
     left: 0
     right: 80%
     top: 96px
-    height: 4px
     background-color: $textBlack
   .wrapper
     display: flex
@@ -293,10 +291,51 @@
         color: $gold
         display: inline-block
         border-bottom: 2px solid $gold
-
   h2
     margin: 16px 0 0 -20px
     padding-left: 20px
     position: relative
     z-index: 10
     background-color: $lightestGrey
+
+  &_page
+    padding: 68px 0 20px
+    position: relative
+    font-size: 13px
+    .line-gold_left
+      right: 30%
+      top: 124px
+    .title__container
+      margin-bottom: 80px
+      display: flex
+      justify-content: flex-end
+      width: 100%
+    h1
+      padding-left: 32px
+      display: inline-block
+      color: #cc9966
+      background-color: white
+      font-family: Bodoni
+      font-weight: 600
+      font-size: 100px
+    h2
+      padding: 88px 0 20px
+      position: relative
+      font-size: 48px
+      max-width: 500px
+      &:before
+        position: absolute
+        content: url('../img/icons/marker_big.png')
+        top: 0
+        left: -100px
+        z-index: -1
+    .wrapper_half
+      position: relative
+      max-width: 560px
+      width: 100%
+      height: 520px
+      background-color: white
+      z-index: 10
+    .wrapper_fullHD
+      margin-bottom: 80px
+

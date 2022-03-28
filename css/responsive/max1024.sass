@@ -69,8 +69,17 @@
       text-align: center
     h2
       text-align: center
+    &_page
+      .wrapper_half
+        max-width: unset
+      .title__container
+        margin-bottom: unset
+        justify-content: center
+      h1
+        padding-left: unset
+        font-size: 60px
 
-  #YMapsID
+  #YMapsID, #YMapsID2
     position: relative
     left: unset
     right: unset
@@ -81,3 +90,32 @@
       li
         margin-bottom: 16px
 
+  .callback
+    .wrapper
+      padding: 80px 15px 40px
+    form
+      margin-top: 48px
+      flex-flow: column
+      align-items: center
+    &__controls__text
+      position: absolute
+      top: 24px
+      left: 16px
+      right: 16px
+      align-items: center
+      text-align: center
+      div
+        max-width: unset
+    &__inputs__small-group
+      flex-flow: column
+      gap: 0
+    h2
+      margin: -18px 0 8px
+
+  .accordion
+    &__item
+      h2
+        padding: 24px 0
+        font-size: 24px
+    &__arrow-container
+      width: 160px
