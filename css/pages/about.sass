@@ -8,6 +8,9 @@
     display: flex
   &__img-container
     margin-right: 72px
+    //img
+    //  max-width: 560px
+    //  width: 100%
   &__content
     .education__achievements__list
       margin: 0
@@ -98,6 +101,10 @@
     left: 50%
     top: 66px
   h2
+    padding-right: 32px
+    display: inline-block
+    color: #cc9966
+    background-color: white
     max-width: 640px
   &__text
     margin: -96px 0 0 380px
@@ -106,10 +113,108 @@
       margin-bottom: 24px
   &__list
     margin: 48px 0 92px
-    display: flex
-    justify-content: space-between
-    img
-      width: 280px
+    //display: flex
+    //justify-content: center
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(260px, 4fr))
+    gap: 70px
+    &__img
+      width: 100%
+    &_video
+      display: flex
+      gap: 20px
+      .img
+        &__title
+          margin: 12px 0
+          &_publication
+            font-weight: 600
+        &__link
+          color: $gold
+          strong
+            display: block
+      img
+        width: 100%
+    a
+      color: $darkGrey
+      font-size: 18px
+    .publication__link_more
+      display: flex
+      justify-content: center
+      a
+        display: block
+        max-width: 200px
+        color: $gold
+        font-family: Bodoni
+        font-weight: 600
+        font-size: 36px
+        div
+          margin-bottom: 24px
+      .img__title_publication
+        margin: 16px 0 8px
+        font-weight: 600
+        max-width: 280px
+  &_page
+    position: relative
+    .line-gold_right
+      left: 40%
+      top: 154px
+    &__text
+      margin-top: 48px
+      font-size: 18px
+      &__quotes-container
+        margin-right: 32px
+        float: left
+        width: 290px
+        height: 146px
+        background: url("../img/quots_revers.png") no-repeat
+        background-size: contain
+      p
+        margin-bottom: 24px
+    &__info-container
+      max-width: 364px
+    h1
+      margin-top: 88px
+      padding-right: 32px
+      display: inline-block
+      color: #cc9966
+      background-color: white
+      font-family: Bodoni
+      font-weight: 600
+      font-size: 100px
+    &__video-container
+    &__list
+      margin-top: 60px
+      display: grid
+      gap: 20px
+      grid-template-columns: repeat(auto-fit, minmax(320px, 3fr))
+      img
+        width: 100%
+      a
+        color: $darkGrey
+        font-size: 18px
+      .img
+        &__title_publication
+          font-weight: 600
+        &__date
+          margin-top: 8px
+          color: $gold
+      .publication_page__info-container
+        margin: 16px 0 40px
+
+  &_videos
+    position: relative
+    .line-gold_right
+      left: 25%
+      top: 154px
+    h2
+      margin: 88px 0 40px
+      padding-right: 32px
+      display: inline-block
+      color: #cc9966
+      background-color: white
+      font-family: Bodoni
+      font-weight: 600
+      font-size: 100px
 
 .partners
   padding: 80px 0

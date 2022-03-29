@@ -1398,6 +1398,10 @@ footer {
   top: 66px;
 }
 .publication h2 {
+  padding-right: 32px;
+  display: inline-block;
+  color: #cc9966;
+  background-color: white;
   max-width: 640px;
 }
 .publication__text {
@@ -1409,11 +1413,130 @@ footer {
 }
 .publication__list {
   margin: 48px 0 92px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 4fr));
+  gap: 70px;
 }
-.publication__list img {
-  width: 280px;
+.publication__list__img {
+  width: 100%;
+}
+.publication__list_video {
+  display: flex;
+  gap: 20px;
+}
+.publication__list_video .img__title {
+  margin: 12px 0;
+}
+.publication__list_video .img__title_publication {
+  font-weight: 600;
+}
+.publication__list_video .img__link {
+  color: #cc9966;
+}
+.publication__list_video .img__link strong {
+  display: block;
+}
+.publication__list_video img {
+  width: 100%;
+}
+.publication__list a {
+  color: #252525;
+  font-size: 18px;
+}
+.publication__list .publication__link_more {
+  display: flex;
+  justify-content: center;
+}
+.publication__list .publication__link_more a {
+  display: block;
+  max-width: 200px;
+  color: #cc9966;
+  font-family: Bodoni;
+  font-weight: 600;
+  font-size: 36px;
+}
+.publication__list .publication__link_more a div {
+  margin-bottom: 24px;
+}
+.publication__list .publication__link_more .img__title_publication {
+  margin: 16px 0 8px;
+  font-weight: 600;
+  max-width: 280px;
+}
+.publication_page {
+  position: relative;
+}
+.publication_page .line-gold_right {
+  left: 40%;
+  top: 154px;
+}
+.publication_page__text {
+  margin-top: 48px;
+  font-size: 18px;
+}
+.publication_page__text__quotes-container {
+  margin-right: 32px;
+  float: left;
+  width: 290px;
+  height: 146px;
+  background: url("../img/quots_revers.png") no-repeat;
+  background-size: contain;
+}
+.publication_page__text p {
+  margin-bottom: 24px;
+}
+.publication_page__info-container {
+  max-width: 364px;
+}
+.publication_page h1 {
+  margin-top: 88px;
+  padding-right: 32px;
+  display: inline-block;
+  color: #cc9966;
+  background-color: white;
+  font-family: Bodoni;
+  font-weight: 600;
+  font-size: 100px;
+}
+.publication_page__list {
+  margin-top: 60px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 3fr));
+}
+.publication_page__list img {
+  width: 100%;
+}
+.publication_page__list a {
+  color: #252525;
+  font-size: 18px;
+}
+.publication_page__list .img__title_publication {
+  font-weight: 600;
+}
+.publication_page__list .img__date {
+  margin-top: 8px;
+  color: #cc9966;
+}
+.publication_page__list .publication_page__info-container {
+  margin: 16px 0 40px;
+}
+.publication_videos {
+  position: relative;
+}
+.publication_videos .line-gold_right {
+  left: 25%;
+  top: 154px;
+}
+.publication_videos h2 {
+  margin: 88px 0 40px;
+  padding-right: 32px;
+  display: inline-block;
+  color: #cc9966;
+  background-color: white;
+  font-family: Bodoni;
+  font-weight: 600;
+  font-size: 100px;
 }
 
 .partners {
@@ -1581,6 +1704,14 @@ footer {
   .about__main {
     flex-flow: column;
   }
+  .about__img-container img {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .publication__list {
+    flex-flow: wrap;
+  }
 }
 @media only screen and (max-width: 1024px) {
   h2 {
@@ -1656,6 +1787,13 @@ footer {
   }
   .education h2 {
     margin-bottom: 32px;
+  }
+
+  .publication .line-gold_right {
+    top: 50px;
+  }
+  .publication__text {
+    margin: -80px 0 0 280px;
   }
 
   .contacts .wrapper {
@@ -1764,6 +1902,39 @@ footer {
     margin-left: unset;
   }
 
+  .about .line-gold_right {
+    top: 82px;
+  }
+  .about h1 {
+    margin: 48px 0 16px;
+    font-size: 60px;
+  }
+  .about__img-container {
+    margin: 0;
+  }
+  .about__name h2 {
+    font-size: 48px;
+  }
+  .about__name div {
+    font-size: 36px;
+  }
+  .about__content .education__achievements__list {
+    flex-flow: column;
+  }
+  .about__content .education__achievements__list li {
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .documents h2 {
+    margin-top: 40px;
+    font-size: 40px;
+  }
+  .documents__list {
+    justify-content: space-around;
+  }
+
   .services__list {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 56px;
@@ -1846,6 +2017,48 @@ footer {
   .accordion__arrow-container {
     width: 140px;
   }
+
+  .publication .line-gold_right {
+    top: 28px;
+  }
+  .publication h1 {
+    font-size: 60px;
+  }
+  .publication h2 {
+    font-size: 48px;
+  }
+  .publication__list_video {
+    flex-flow: column;
+  }
+  .publication__list_video li {
+    margin-top: 20px;
+    display: flex;
+  }
+  .publication__list_video li .publication_page__video-container {
+    margin-right: 20px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+  .publication__text {
+    margin: 40px 0;
+  }
+  .publication_page .line-gold_right {
+    top: 126px;
+  }
+  .publication_page h1 {
+    font-size: 60px;
+  }
+  .publication_page__text__quotes-container {
+    width: 146px;
+    height: 72px;
+  }
+  .publication_page_videos .line-gold_right {
+    top: 126px;
+  }
+  .publication_page_videos h2 {
+    margin-top: 48px;
+    font-size: 48px;
+  }
 }
 @media only screen and (max-width: 480px) {
   h2 {
@@ -1878,6 +2091,23 @@ footer {
 
   .nav__list_1 {
     font-size: 20px;
+  }
+
+  .about .line-gold_right {
+    top: 76px;
+  }
+  .about h1 {
+    font-size: 44px;
+  }
+  .about__main {
+    margin: 24px 0 40px;
+  }
+  .about__name h2 {
+    margin-top: 20px;
+    font-size: 36px;
+  }
+  .about__name div {
+    font-size: 28px;
   }
 
   .principles {
@@ -1926,6 +2156,36 @@ footer {
   }
   .accordion__arrow-container {
     display: none;
+  }
+
+  .callback__buttons {
+    flex-flow: column;
+    gap: 20px;
+  }
+
+  .publication h1 {
+    font-size: 48px;
+  }
+  .publication_page .line-gold_right {
+    top: 80px;
+  }
+  .publication_page h1 {
+    margin-top: 48px;
+    font-size: 48px;
+  }
+  .publication_page__text__quotes-container {
+    width: 110px;
+    height: 64px;
+  }
+  .publication__list_video li {
+    display: block;
+  }
+  .publication_videos .line-gold_right {
+    top: 80px;
+  }
+  .publication_videos h2 {
+    margin-top: 48px;
+    font-size: 48px;
   }
 }
 @media only screen and (min-width: 1380px) {
